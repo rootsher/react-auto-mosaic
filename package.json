@@ -1,7 +1,7 @@
 {
     "name": "react-auto-mosaic",
     "description": "Automatic box behavior in the grid - responsive mosaic.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "dependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1",

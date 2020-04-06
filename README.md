@@ -14,14 +14,20 @@ npm install --save react-auto-mosaic
 
 ## demo
 
-<img src="https://raw.githubusercontent.com/rootsher/react-auto-mosaic/master/docs/assets/img/demo.gif">
+### before (problem with mismatched tiles)
+
+<img src="https://raw.githubusercontent.com/rootsher/react-auto-mosaic/master/docs/assets/img/demo-before.gif">
+
+### after (solved using react-auto-mosaic)
+
+<img src="https://raw.githubusercontent.com/rootsher/react-auto-mosaic/master/docs/assets/img/demo-after.gif">
 
 ## example
 
 1. Define the number of columns in the grid.
 2. Define grid breakpoints (like in bootstrap).
-3. Create a list of boxes, of any height.
-4. Enjoy automatic box behavior :)
+3. Create a list of tiles, of any height.
+4. Enjoy automatic tiles behavior :)
 
 ```ts
 export const DemoMosaic = () => (
@@ -36,15 +42,15 @@ export const DemoMosaic = () => (
             1920: 1,
         }}
     >
-        <div>box-1</div>
-        <div>box-2</div>
-        <div>box-3</div>
-        <div>box-4</div>
-        <div>box-5</div>
-        <div>box-6</div>
-        <div>box-7</div>
-        <div>box-8</div>
-        <div>box-9</div>
+        <div>tile-1</div>
+        <div>tile-2</div>
+        <div>tile-3</div>
+        <div>tile-4</div>
+        <div>tile-5</div>
+        <div>tile-6</div>
+        <div>tile-7</div>
+        <div>tile-8</div>
+        <div>tile-9</div>
     </ReactAutoMosaic>
 )};
 
