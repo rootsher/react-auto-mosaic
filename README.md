@@ -33,6 +33,7 @@ npm install --save react-auto-mosaic
 export const DemoMosaic = () => (
     <ReactAutoMosaic
         gridColumns={12}
+        gridGutterWidth={20}
         gridBreakpoints={{
             380: 12,
             576: 6,

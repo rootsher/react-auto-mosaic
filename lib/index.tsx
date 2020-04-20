@@ -5,16 +5,25 @@ const useStyles = createUseStyles({
     container: {
         display: 'flex',
         flexWrap: 'wrap',
+        margin: ({ gutter }: { gutter: number }) =>  `0 ${-gutter / 2}px`
     },
     column: {
+        width: '100%',
+        boxSizing: 'border-box',
         flex: ({ columnSize }: { columnSize: number }) => `0 0 ${columnSize}%`,
         maxWidth: ({ columnSize }: { columnSize: number }) => `${columnSize}%`,
+        padding: ({ gutter }: {  gutter: number }) => `0 ${gutter / 2}px`,
+
+        '& > *': {
+            marginBottom: ({ gutter }: {  gutter: number }) => `${gutter}px`,
+        }
     },
 });
 
 type ReactAutoMosaicProps = {
     children: ReactElement[];
     gridColumns: number;
+    gridGutterWidth: number;
     gridBreakpoints: { [key: string]: number };
 };
 
@@ -43,10 +52,11 @@ function bucketAlgorithm(
 export const ReactAutoMosaic: FC<ReactAutoMosaicProps> = ({
     children,
     gridColumns,
+    gridGutterWidth,
     gridBreakpoints,
 }) => {
     const [columns, setColumns] = useState<number>(0);
-    const classes = useStyles({ columnSize: 100 / columns });
+    const classes = useStyles({ columnSize: 100 / columns, gutter: gridGutterWidth });
     const buckets = bucketAlgorithm(columns, children);
 
     useEffect(() => {
