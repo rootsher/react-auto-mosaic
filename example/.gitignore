@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# misc
+.DS_StoreZ
+
+npm-debug.log*
+
+/.idea

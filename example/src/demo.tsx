@@ -1,7 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import { ReactAutoMosaic } from './react-auto-mosaic';
+import { ReactAutoMosaic } from 'react-auto-mosaic';
 
 const useStyles = createUseStyles({
     tile: {

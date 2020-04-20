@@ -78,7 +78,7 @@ export const ReactAutoMosaic: FC<ReactAutoMosaicProps> = ({
 
     return (
         <div className={classes.container}>
-            {Array.from({ length: columns }).map((column, index) => {
+            {Array.from({ length: columns }).map((_column, index) => {
                 return (
                     <div key={index} className={classes.column}>
                         {buckets[index].map((element: ReactElement, index) => {
