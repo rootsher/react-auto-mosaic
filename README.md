@@ -63,7 +63,3 @@ export const DemoMosaic = () => (
 ```shell script
 $ npm start
 ```
-
-## TODO
-
-1. make package installable on the NPM.
