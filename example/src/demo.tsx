@@ -11,7 +11,6 @@ const useStyles = createUseStyles({
         alignItems: 'center',
         justifyContent: 'center',
         fontWeight: 'bold',
-        margin: '0 0.5rem 1rem 0.5rem',
         fontSize: '1.4rem',
     },
 });
@@ -22,6 +21,7 @@ export const DemoMosaic = () => {
     return (
         <ReactAutoMosaic
             gridColumns={12}
+            gridGutterWidth={20}
             gridBreakpoints={{
                 380: 12,
                 576: 6,
