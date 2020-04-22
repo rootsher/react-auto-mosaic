@@ -91,7 +91,7 @@ export const ReactAutoMosaic: FC<ReactAutoMosaicProps> = ({
             {Array.from({ length: columns }).map((_column, index) => {
                 return (
                     <div key={index} className={classes.column}>
-                        {buckets[index].map((element: ReactElement, index) => {
+                        {(buckets[index] || []).map((element: ReactElement, index) => {
                             return <Fragment key={index}>{element}</Fragment>;
                         })}
                     </div>
